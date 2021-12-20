@@ -1,0 +1,78 @@
+.select-box {
+  width: 200px;
+}
+._t {
+  height: 140px !important;
+  flex-wrap: wrap;
+}
+._t ._t_list {
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+.pro_box {
+  margin-bottom: 20px;
+}
+.pro_box > ul li {
+  display: flex;
+  width: 400px;
+  margin-top: 15px;
+}
+.pro_box > ul li > span {
+  display: inline-block;
+  width: 120px;
+}
+.pro_box > ul li .upload-box-img {
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+.pro_box > ul li .upload-box-img label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #999;
+  margin-bottom: 0;
+  text-align: center;
+  line-height: 140px;
+  z-index: 1;
+}
+.pro_box > ul li .upload-box-img label .img_box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.pro_box > ul li .upload-box-img label .img_box .auto_img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.pro_box > ul li .upload-box-img label .file-box {
+  display: none;
+}
+.pro_box > ul li .upload-box-img .other {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+.pro_box > ul li .pro-text-box {
+  height: 240px;
+  resize: none;
+}
+.pro_box > ul .fb {
+  cursor: pointer;
+}
+.pro_box > ul .df {
+  align-items: center;
+}
+.pro_box > ul .l1 > label {
+  margin-right: 10px;
+}

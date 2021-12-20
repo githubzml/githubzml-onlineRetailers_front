@@ -1,0 +1,52 @@
+html,
+body,
+.register-box {
+  height: 100%;
+  background: url("../images/bg.jpg") no-repeat center;
+  block-size: convert;
+}
+.register-box {
+  padding: 100px;
+}
+.register-box .register {
+  width: 480px;
+  margin: 0 auto;
+  background-color: #ddd;
+  padding: 20px;
+  border-radius: 20px;
+}
+.register-box .title {
+  font-size: 24px;
+  color: #444;
+  text-align: center;
+}
+.register-box .form-box {
+  margin-top: 60px;
+}
+.register-box .label-box {
+  width: 60px;
+  height: 38px;
+  line-height: 38px;
+}
+.register-box .ipt-box {
+  width: 380px;
+}
+.register-box .code-box {
+  width: 200px;
+}
+.register-box .btn-box {
+  width: 180px;
+  padding-left: 20px;
+}
+.register-box .commit-btn {
+  margin-top: 40px;
+  margin-left: 60px;
+}
+.register-box .register-text {
+  margin-top: 20px;
+  cursor: pointer;
+}
+.register-box .error-msg {
+  color: red;
+  display: none;
+}

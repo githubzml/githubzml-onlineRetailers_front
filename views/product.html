@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/less/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/less/public.css">
+  <link rel="stylesheet" href="/less/index.css">
+  <link rel="stylesheet" href="/less/product.css">
+</head>
+
+<body>
+  <div class="index">
+    <div class="header-nav">
+      <div class="_l nav-title">商品管理系统</div>
+      <div class="_r">
+        <div class="img-box cursor">
+          <img id="user-img" class="auto-img" src="" alt="">
+        </div>
+        <div id="nickname">昵称</div>
+        <div class="cursor">设置</div>
+        <div class="cursor">退出</div>
+      </div>
+    </div>
+    <div class="content-box">
+      <div class="aside">
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <div class="mb-0">
+                <div class="c-title s1" data-toggle="collapse" data-target="#collapseOne">
+                  <span class="list-icon"><i class="fa fa-cube"></i></span>
+                  <span>商品管理</span>
+                  <span><i class="fa fa-angle-right "></i></span>
+                </div>
+              </div>
+            </div>
+
+            <div id="collapseOne" class="collapse show" data-parent="#accordionExample">
+              <div class="card-body">
+                <div class="c-item" id="p_type">商品类型</div>
+                <div class="c-item active">商品列表</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingOne1">
+              <div class="mb-0">
+                <div class="c-title s1" data-toggle="collapse" data-target="#collapseOne1">
+                  <span class="list-icon"> <i class="fa fa-file-text-o "></i></span>
+                  <span>订单管理</span>
+                  <span> <i class="fa fa-angle-right "></i></span>
+                </div>
+              </div>
+            </div>
+
+            <div id="collapseOne1" class="collapse" data-parent="#accordionExample">
+              <div class="card-body">
+                <div class="c-item">订单列表</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingOne2">
+              <div class="mb-0">
+                <div class="c-title s1" data-toggle="collapse" data-target="#collapseOne2">
+                  <span class="list-icon"><i class="fa fa-bar-chart "></i></span>
+                  <span>数据统计</span>
+                  <span><i class="fa fa-angle-right "></i></span>
+                </div>
+              </div>
+            </div>
+
+            <div id="collapseOne2" class="collapse" data-parent="#accordionExample">
+              <div class="card-body">
+                <div class="c-item">
+                  数据图表
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+
+        <!-- 商品列表 -->
+        <div id="pro_list">
+          <div class="_t">
+            <div class="_t_list">
+              <div class=" type-title">商品名称</div>
+              <div class=" search-box">
+                <input id="ipt_val" type="text" class="form-control search-item" placeholder="输入商品名称"
+                  data-title="pname">
+              </div>
+            </div>
+            <div class="_t_list">
+              <div class=" type-title">商品类型</div>
+              <div class=" search-box select-box">
+                <select name="" id="" class="form-control type-box search-item" data-title="typeId">
+                  <option value="default">请选择</option>
+                </select>
+              </div>
+            </div>
+            <div class="_t_list">
+              <div class=" type-title">商品状态</div>
+              <div class=" search-box select-box">
+                <select name="" id="" class="form-control search-item" data-title="status">
+                  <option value="default">请选择</option>
+                  <option value="1">上架</option>
+                  <option value="0">下架</option>
+                </select>
+              </div>
+            </div>
+            <div class="_t_list">
+              <div class=" type-title">上架日期</div>
+              <div class=" search-box select-box">
+                <input class="form-control search-item" type="date" data-title="updatedAt">
+              </div>
+              <div class="">
+                <button id="btn_search" type="button" class="btn btn-primary">搜索</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="add-type">
+            <button id="pro-btn" type="button" class="btn btn-warning" data-toggle="modal"
+              data-target="#type">发布商品</button>
+          </div>
+
+          <div class="table-box">
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>序号</th>
+                  <th>商品名称</th>
+                  <th>商品类型</th>
+                  <th>状态</th>
+                  <th>发布时间</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody id="_tbody">
+
+
+
+
+              </tbody>
+            </table>
+            <nav>
+              <ul class="pagination justify-content-center">
+                <li class="page-item" id="prev"><a class="page-link" href="#">上一页</a></li>
+                <li class="page-item"><a id="current-page" class="page-link" href="#"></a></li>
+                <li class="page-item" id="next"><a class="page-link" href="#">下一页</a></li>
+                <li class="page-item"><a class="page-link" href="#">共<span id="total-page"></span>页</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- 发布商品 -->
+        <div id="pro_box" class="pro_box hide">
+          <ul>
+            <li id="fb" class="fb">返回</li>
+            <li class="df"><span>商品名称</span><input type="text" class="form-control p-name" data-name="pname"
+                placeholder="输入商品名称"></li>
+            <li class="df">
+              <span>商品类型</span>
+              <select name="" class="form-control p-name type-box" data-name="typeId">
+                <option value="default">请选择</option>
+              </select>
+            </li>
+            <li class="df"><span>商品价格</span><input type="text" class="form-control p-name" placeholder="输入商品价格"
+                data-name="price"></li>
+            <li class="df"><span>库存</span><input type="text" class="form-control p-name" placeholder="输入库存"
+                data-name="count"></li>
+
+            <li>
+              <span>商品图片</span>
+              <div class="upload-box-img">
+                <label>
+                  <span>上传图片</span>
+                  <input id="file-pro" type="file" class="file-box">
+
+                  <div class="img_box">
+                    <img class="auto_img auto1_img" src="" />
+                  </div>
+                </label>
+
+                <div class="other hide"></div>
+
+              </div>
+
+
+
+            </li>
+            <li>
+              <span>详细图片</span>
+              <div class="upload-box-img">
+                <label>
+                  <span>上传图片</span>
+                  <input id="file-detail" type="file" class="file-box">
+
+                  <div class="img_box">
+                    <img class="auto_img auto2_img" src="" />
+                  </div>
+                </label>
+
+                <div class="other hide"></div>
+              </div>
+            </li>
+
+            <li class="df">
+              <span>商品状态</span>
+              <div class="form-check l1">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                  上架
+                </label>
+              </div>
+              <div class="form-check l1">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="0">
+                <label class="form-check-label" for="exampleRadios2">
+                  下架
+                </label>
+              </div>
+            </li>
+            <li><span>商品描述</span><textarea class="form-control pro-text-box p-name" data-name="desc"
+                placeholder="输入商品描述"></textarea></li>
+
+            <li>
+              <button style="margin-left:90px;" type="button" class="btn btn-warning send-box">确定发布</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/popper.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/utils.js"></script>
+  <script src="/js/product.js"></script>
+</body>
+
+</html>

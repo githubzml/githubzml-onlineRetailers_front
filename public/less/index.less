@@ -1,0 +1,190 @@
+@theme: #1470D7;
+
+html,
+body,
+.index {
+  height: 100%;
+}
+
+.header-nav {
+  height: 60px;
+  background-color: @theme;
+  //黏贴定位
+  position: sticky;
+  top: 0;
+  padding: 0 20px;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+
+  .nav-title {
+    line-height: 60px;
+    font-size: 18px;
+  }
+
+  ._r {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+
+    >div {
+      margin-left: 20px;
+    }
+
+    .img-box {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      background-color: #ddd;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .cursor {
+      cursor: pointer;
+    }
+  }
+}
+
+.aside {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 160px;
+  height: 100%;
+  background-color: @theme;
+}
+
+.card {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+.card-header {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.c-title {
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #0D5AB2;
+  font-size: 14px;
+}
+
+.accordion>.card>.card-header {
+  margin: 0;
+}
+
+.card-body {
+  padding: 0;
+}
+
+.c-item {
+  padding: 0 20px 0 40px;
+  height: 34px;
+  line-height: 34px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+
+  &.active {
+    background-color: #0F62C1;
+  }
+}
+
+
+.list-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.content {
+  margin-left: 160px;
+
+  ._t {
+    height: 60px;
+    display: flex;
+    align-items: center;
+
+    >div {
+      margin: 0 10px;
+    }
+  }
+
+  .add-type {
+    margin-left: 10px;
+  }
+
+  .table-box {
+    margin: 10px 0 0 10px;
+  }
+
+  // 模态框 输入框
+  .Ipt1 {
+    display: flex;
+    align-items: center;
+
+    >label {
+      width: 100px;
+    }
+  }
+
+
+}
+
+.auto-img {
+  display: block;
+  width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+
+
+.setting-box {
+  position: relative;
+  height: 100%;
+  margin-top: 40px
+}
+
+.setting-box:hover .list-menu {
+  display: block;
+}
+
+.list-menu {
+  position: absolute;
+  left: -36px;
+  top: 40px;
+  width: 100px;
+  padding: 10px 0;
+  background-color: #1470D7;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  display: none;
+}
+
+.menu-item:hover {
+  background-color: #0e5eb9;
+}
+
+.user-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+
+  .user-file {
+    display: none;
+  }
+}

@@ -1,0 +1,150 @@
+html,
+body,
+.index {
+  height: 100%;
+}
+.header-nav {
+  height: 60px;
+  background-color: #1470D7;
+  position: sticky;
+  top: 0;
+  padding: 0 20px;
+}
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.header-nav .nav-title {
+  line-height: 60px;
+  font-size: 18px;
+}
+.header-nav ._r {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.header-nav ._r > div {
+  margin-left: 20px;
+}
+.header-nav ._r .img-box {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: #ddd;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.header-nav ._r .cursor {
+  cursor: pointer;
+}
+.aside {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 160px;
+  height: 100%;
+  background-color: #1470D7;
+}
+.card {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+}
+.card-header {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.c-title {
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #0D5AB2;
+  font-size: 14px;
+}
+.accordion > .card > .card-header {
+  margin: 0;
+}
+.card-body {
+  padding: 0;
+}
+.c-item {
+  padding: 0 20px 0 40px;
+  height: 34px;
+  line-height: 34px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+.c-item.active {
+  background-color: #0F62C1;
+}
+.list-icon {
+  width: 20px;
+  height: 20px;
+}
+.content {
+  margin-left: 160px;
+}
+.content ._t {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.content ._t > div {
+  margin: 0 10px;
+}
+.content .add-type {
+  margin-left: 10px;
+}
+.content .table-box {
+  margin: 10px 0 0 10px;
+}
+.content .Ipt1 {
+  display: flex;
+  align-items: center;
+}
+.content .Ipt1 > label {
+  width: 100px;
+}
+.auto-img {
+  display: block;
+  width: 100%;
+}
+.hide {
+  display: none;
+}
+.setting-box {
+  position: relative;
+  height: 100%;
+  margin-top: 40px;
+}
+.setting-box:hover .list-menu {
+  display: block;
+}
+.list-menu {
+  position: absolute;
+  left: -36px;
+  top: 40px;
+  width: 100px;
+  padding: 10px 0;
+  background-color: #1470D7;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  display: none;
+}
+.menu-item:hover {
+  background-color: #0e5eb9;
+}
+.user-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+}
+.user-label .user-file {
+  display: none;
+}

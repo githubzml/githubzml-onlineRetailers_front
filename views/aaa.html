@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+
+    .wrapper {
+      width: calc(100% - 40px);
+      height: calc(100% - 40px);
+      padding: 20px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      height: 60px;
+      background-color: aqua;
+    }
+
+    .body {
+      height: calc(100% - 60px);
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .header button {
+      margin: 0 10px;
+    }
+  </style>
+</head>
+
+<body style="margin: 0;">
+  <div class="wrapper">
+    <div class="body" id="canvas"></div>
+  </div>
+
+  <script src="http://demo.qunee.com/lib/qunee-min.js?v=2.7.7.6"></script>
+  <script>
+    if (!window.getI18NString) { getI18NString = function (s) { return s; } }
+    var graph = new Q.Graph(canvas);
+    var hello = graph.createNode("Hello", -100, -50);
+    hello.image = Q.Graphs.server;
+    var qunee = graph.createNode("Qunee", 100, 50);
+
+
+
+
+    var nodeWithScale = graph.createNode("Node with Scale\nand Render Color", 0, 110);
+    nodeWithScale.size = { width: 100, height: -1 };
+    // nodeWithScale.setStyle(Q.Styles.RENDER_COLOR, "#E21667");
+    nodeWithScale.setStyle(Q.Styles.RENDER_COLOR, "#B3B3B3");
+
+    // nodeWithScale.setStyle(Q.Styles.SHADOW_COLOR, "#888");
+    // nodeWithScale.setStyle(Q.Styles.SHADOW_OFFSET_X, 5);
+    // nodeWithScale.setStyle(Q.Styles.SHADOW_OFFSET_Y, 5);
+    // nodeWithScale.setStyle(Q.Styles.SHADOW_BLUR, 5);
+
+    nodeWithScale.image = "/images/zxmpS380-1.svg";
+
+
+
+    var edge = graph.createEdge("Hello\nQunee", hello, qunee);
+
+    addNodeFlag(nodeWithScale, "/images/Yset_1_dark.svg")
+    cc(nodeWithScale, "/images/break-1.svg", true)
+
+    function addNodeFlag(node, icoUrl) {
+      let label = new Q.ImageUI(icoUrl);
+      label.position = Q.Position.LEFT_TOP;
+      label.anchorPosition = Q.Position.LEFT_BOTTOM;
+      label.size = { width: 15, height: 15 };
+      label.offsetX = 15;
+      label.offsetY = 15;
+      node.addUI(label);
+      return node;
+    }
+
+    function cc(node, icoUrl, flag) {
+      let label = new Q.ImageUI(icoUrl);
+      label.position = Q.Position.LEFT_TOP;
+      label.anchorPosition = Q.Position.LEFT_BOTTOM;
+      label.size = { width: 15, height: 15 };
+      if (flag) {
+        label.offsetX = 30;
+        label.offsetY = 15;
+      } else {
+        label.offsetX = 15;
+        label.offsetY = 15;
+      }
+
+      node.addUI(label);
+      return node;
+    }
+
+    // edge.setStyle(Q.Styles.LABEL_OFFSET_Y, -10);
+    // edge.setStyle(Q.Styles.LABEL_POSITION, Q.Position.CENTER_TOP);
+    // edge.setStyle(Q.Styles.LABEL_ANCHOR_POSITION, Q.Position.CENTER_BOTTOM);
+    // edge.setStyle(Q.Styles.LABEL_BORDER, 1);
+    // edge.setStyle(Q.Styles.LABEL_POINTER, true);
+    // edge.setStyle(Q.Styles.LABEL_PADDING, new Q.Insets(2, 5));
+    // edge.setStyle(Q.Styles.LABEL_BACKGROUND_GRADIENT, Q.Gradient.LINEAR_GRADIENT_VERTICAL);
+  </script>
+</body>
+
+</html>
